@@ -18,8 +18,12 @@ public class Event extends NodeMultiple {
 	public static final String PROMPT_ANSWER = "Answer: ";
 	public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
 
-	public Event(GUIManager g, String s){
+	private GUIManager gui;
+	private String data;
 
+	public Event(GUIManager g, String s){
+		gui = g;
+		data = s;
 	}
 
 	/**
@@ -73,7 +77,7 @@ public class Event extends NodeMultiple {
 	 */
 	public String getData() {
 		/* TO BE COMPLETED */
-		return "";
+		return data;
 	}
 
 	/**
@@ -81,7 +85,7 @@ public class Event extends NodeMultiple {
 	 * @param data
 	 */
 	public void setData(String data) {
-		/* TO BE COMPLETED */
+		this.data = data;
 	}
 
 	/**
