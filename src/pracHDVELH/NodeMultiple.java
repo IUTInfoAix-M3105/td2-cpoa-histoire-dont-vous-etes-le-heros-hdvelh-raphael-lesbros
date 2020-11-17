@@ -20,6 +20,7 @@ public class NodeMultiple {
 	@Override
 	public String toString() {
 		/* TO BE COMPLETED */
+		return "";
 	}
 
 	/* Getters/Setters */
@@ -33,6 +34,7 @@ public class NodeMultiple {
 	 */
 	public NodeMultiple getDaughter(int i) {
 		/* TO BE COMPLETED */
+		return null;
 	}
 
 	/**
@@ -58,6 +60,7 @@ public class NodeMultiple {
 	 */
 	public NodeMultiple[] getDaughters() {
 		/* TO BE COMPLETED */
+		return null;
 	}
 
 	/**
@@ -84,6 +87,7 @@ public class NodeMultiple {
 	 */
 	public Object getData() {
 		/* TO BE COMPLETED */
+		return null;
 	}
 
 	/**
@@ -99,6 +103,7 @@ public class NodeMultiple {
 	 */
 	public boolean hasDaughters() {
 		/* TO BE COMPLETED */
+		return false;
 	}
 
 	/* Constructors */
@@ -117,6 +122,7 @@ public class NodeMultiple {
 	 */
 	public NodeMultiple(Object data) {
 		/* TO BE COMPLETED */
+	}
 }
 
 // eof
