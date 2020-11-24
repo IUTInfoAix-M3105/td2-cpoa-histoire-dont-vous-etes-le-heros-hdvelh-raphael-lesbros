@@ -13,6 +13,7 @@ public class Scenario {
 	private static final String MSG_EMPTY_SCENARIO = "Sorry, no scenario was found.";
 	private static final String MSG_FINALE = "That's all folks!";
 	private Event head;
+	private Event currentEvent;
 	private GUIManager gui;
 
 	public Scenario(GUIManager g, Event h) {
@@ -21,7 +22,14 @@ public class Scenario {
 	}
 
 	public String run() {
-		return "";
+		if (this.head == null) {
+			return this.MSG_EMPTY_SCENARIO;
+		}
+		while (currentEvent.hasDaughters()) {
+			return currentEvent.getData();
+
+		}
+		return MSG_FINALE;
 	}
 
 	/* TO BE COMPLETED */
@@ -43,7 +51,14 @@ public class Scenario {
 		// **2.2
 		// ***S
 
-		Event startEvent = new Event(gui, "Go!\n" + "(1)1 (2)2");
+		Event startEvent = new Event(gui,
+				"Vous êtes un simple aventurier se reposant pour la nuit dans une taverne, entre deux aventures.\n" + "" +
+				"Vous êtes arrivés ici il y a moins d'une heure, avez réservé une chambre, et êtes rapidement allés vous coucher.\n" +
+				"Vous vous réveillez en pleine nuit, entendant un bruit à votre fenêtre.\n\n" +
+				"(1) Se rendormir\n" +
+				"(2) Vérifier la fenêtre\n" +
+				"(3) Faire semblant de dormir");
+
 		Event event1 = new Event(gui, "event1:\n" + "(1)1.1 (2)1.2");
 		Event event2 = new Event(gui, "event2:\n" + "(1)2.1 (2)2.2");
 		Event endEvent = new Event(gui, "End event: that's it :-)");
@@ -83,6 +98,7 @@ public class Scenario {
 		event4.addDaughter(endEvent);
 		event4.addDaughter(event3);*/
 
+		scenario.currentEvent = scenario.head;
 		System.out.println(scenario.run());
 	}
 }

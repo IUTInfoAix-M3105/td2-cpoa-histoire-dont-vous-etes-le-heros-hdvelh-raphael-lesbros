@@ -26,12 +26,20 @@ public class Event extends NodeMultiple {
 		data = s;
 	}
 
+	public String run() {
+		if (!this.hasDaughters())
+			return this.data;
+		else {
+			this.gui.output(this.data);
+			getDaughter(Integer.parseInt(getPlayerAnswer())).run();
+		}
+	}
+
 	/**
 	 * @return the playerAnswer
 	 */
 	public String getPlayerAnswer() {
-		/* TO BE COMPLETED */
-		return "";
+		return "0";
 	}
 
 	/**
@@ -76,7 +84,6 @@ public class Event extends NodeMultiple {
 	 * @see pracHDVELH.NodeMultiple#getData()
 	 */
 	public String getData() {
-		/* TO BE COMPLETED */
 		return data;
 	}
 
@@ -111,14 +118,14 @@ public class Event extends NodeMultiple {
 	 */
 	public GUIManager getGui() {
 		/* TO BE COMPLETED */
-		return null;
+		return gui;
 	}
 
 	/**
 	 * @param gui the gui to set
 	 */
 	public void setGui(GUIManager gui) {
-		/* TO BE COMPLETED */
+		this.gui = gui;
 	}
 
 	/**

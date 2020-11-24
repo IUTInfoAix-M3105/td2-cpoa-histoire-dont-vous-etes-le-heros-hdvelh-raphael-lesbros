@@ -7,6 +7,10 @@ package pracHDVELH;
 
 import myUtils.ErrorNaiveHandler;
 
+import java.util.Dictionary;
+import java.util.Map;
+import java.util.Vector;
+
 /**
  * @author prost
  *
@@ -23,6 +27,7 @@ public class NodeMultiple {
 		return "";
 	}
 
+
 	/* Getters/Setters */
 	/**
 	 * Gets the {@code i}th daughter node.
@@ -33,7 +38,6 @@ public class NodeMultiple {
 	 * @return the {@code i}th daughter node, or {@code null} if it does not exist.
 	 */
 	public NodeMultiple getDaughter(int i) {
-		/* TO BE COMPLETED */
 		return null;
 	}
 
@@ -52,7 +56,7 @@ public class NodeMultiple {
 	 * @param i        the daughter node's index
 	 */
 	public void setDaughter(NodeMultiple daughter, int i) {
-		/* TO BE COMPLETED */
+
 	}
 
 	/**
@@ -102,7 +106,6 @@ public class NodeMultiple {
 	 *         daughter node.
 	 */
 	public boolean hasDaughters() {
-		/* TO BE COMPLETED */
 		return false;
 	}
 
@@ -111,7 +114,7 @@ public class NodeMultiple {
 	 * Default constructor.
 	 */
 	public NodeMultiple() {
-		/* TO BE COMPLETED */
+
 	}
 
 	/**
